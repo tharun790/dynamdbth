@@ -1,0 +1,35 @@
+{
+  "TableName": "StudentRecords",
+  "AttributeDefinitions": [
+    {
+      "AttributeName": "RegistrationNumber",
+      "AttributeType": "S"
+    },
+    {
+      "AttributeName": "Name",
+      "AttributeType": "S"
+    },
+    {
+      "AttributeName": "CGPA",
+      "AttributeType": "N"
+    },
+    {
+      "AttributeName": "TenthMarks",
+      "AttributeType": "N"
+    },
+    {
+      "AttributeName": "TwelfthMarks",
+      "AttributeType": "N"
+    }
+  ],
+  "KeySchema": [
+    {
+      "AttributeName": "RegistrationNumber",
+      "KeyType": "HASH"
+    }
+  ],
+  "ProvisionedThroughput": {
+    "ReadCapacityUnits": 5,
+    "WriteCapacityUnits": 5
+  }
+}
